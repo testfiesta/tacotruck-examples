@@ -1,0 +1,15 @@
+{
+  "name": "@testfiesta/demo-bun-tf",
+  "version": "1.0.0",
+  "description": "Simple calculator demo with Bun testing",
+  "type": "module",
+  "scripts": {
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage",
+    "test:report": "bun test --reporter=junit --reporter-outfile=./test-results.xml"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  }
+}

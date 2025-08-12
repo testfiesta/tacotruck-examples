@@ -1,0 +1,16 @@
+{
+  "name": "@testfiesta/demo-jest-tf",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.0.4",
+    "jest-junit": "^16.0.0"
+  }
+}

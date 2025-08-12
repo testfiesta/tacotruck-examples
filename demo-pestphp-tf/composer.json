@@ -1,0 +1,22 @@
+{
+    "name": "testfiesta/demo-pestphp-tf",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Testfiesta\\DemoPestphpTf\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Testfiesta\\DemoPestphpTf\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.8"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

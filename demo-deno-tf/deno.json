@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "test": "deno test",
+    "format": "deno fmt",
+    "test:report": "deno test --junit-path=./test-results.xml"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@^0.218.2"
+  }
+}
