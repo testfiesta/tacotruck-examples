@@ -20,7 +20,6 @@ func main() {
 	}
 	fmt.Printf("Division: %d / %d = %d\n", a, b, result)
 	
-	// This will cause an error
 	_, err = calculator.Divide(a, 0)
 	if err != nil {
 		fmt.Printf("Division by zero error: %v\n", err)

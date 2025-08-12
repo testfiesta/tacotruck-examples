@@ -7,7 +7,6 @@ import (
 )
 
 func TestAdd(t *testing.T) {
-	// Test cases
 	tests := []struct {
 		name     string
 		a        int
@@ -20,7 +19,6 @@ func TestAdd(t *testing.T) {
 		{"Zeros", 0, 0, 0},
 	}
 
-	// Run test cases
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			result := calculator.Add(tt.a, tt.b)
@@ -78,7 +76,6 @@ func TestMultiply(t *testing.T) {
 }
 
 func TestDivide(t *testing.T) {
-	// Test cases for successful division
 	tests := []struct {
 		name     string
 		a        int
