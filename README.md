@@ -2,21 +2,22 @@
 
 Each example is a self-contained project with its own README and setup instructions:
 
-| Example | Description |
-|---------|-------------|
-| [demo-apps](./demo-apps/) | Collection of sample applications for testing |
-| [demo-bun-tf](./demo-bun-tf/) | Example using Bun testing framework |
-| [demo-deno-tf](./demo-deno-tf/) | Example using Deno testing framework |
-| [demo-dotnet-nunit-tf](./demo-dotnet-nunit-tf/) | Example using .NET with NUnit |
-| [demo-jest-tf](./demo-jest-tf/) | Example using Jest (JavaScript/TypeScript) |
-| [demo-mocha-tf](./demo-mocha-tf/) | Example using Mocha (JavaScript) |
-| [demo-pestphp-tf](./demo-pestphp-tf/) | Example using Pest PHP testing framework |
-| [demo-phpunit-tf](./demo-phpunit-tf/) | Example using PHPUnit |
-| [demo-pytest-tf](./demo-pytest-tf/) | Example using pytest (Python) |
-| [demo-rspec-tf](./demo-rspec-tf/) | Example using RSpec (Ruby) |
-| [demo-rust-cargo-tf](./demo-rust-cargo-tf/) | Example using Rust with Cargo test |
-| [demo-vitest-tf](./demo-vitest-tf/) | Example using Vitest (JavaScript/TypeScript) |
-| [demo_elixir_tf](./demo_elixir_tf/) | Example using Elixir testing |
+| Example                                         | Description                                   |
+| ----------------------------------------------- | --------------------------------------------- |
+| [demo-apps](./demo-apps/)                       | Collection of sample applications for testing |
+| [demo-bun-tf](./demo-bun-tf/)                   | Example using Bun testing framework           |
+| [demo-deno-tf](./demo-deno-tf/)                 | Example using Deno testing framework          |
+| [demo-dotnet-nunit-tf](./demo-dotnet-nunit-tf/) | Example using .NET with NUnit                 |
+| [demo-jest-tf](./demo-jest-tf/)                 | Example using Jest (JavaScript/TypeScript)    |
+| [demo-mocha-tf](./demo-mocha-tf/)               | Example using Mocha (JavaScript)              |
+| [demo-pestphp-tf](./demo-pestphp-tf/)           | Example using Pest PHP testing framework      |
+| [demo-phpunit-tf](./demo-phpunit-tf/)           | Example using PHPUnit                         |
+| [demo-pytest-tf](./demo-pytest-tf/)             | Example using pytest (Python)                 |
+| [demo-rspec-tf](./demo-rspec-tf/)               | Example using RSpec (Ruby)                    |
+| [demo-rust-cargo-tf](./demo-rust-cargo-tf/)     | Example using Rust with Cargo test            |
+| [demo-vitest-tf](./demo-vitest-tf/)             | Example using Vitest (JavaScript/TypeScript)  |
+| [demo_elixir_tf](./demo_elixir_tf/)             | Example using Elixir testing                  |
+| [demo-golang-tf](./demo-golang-tf/)             | Example using golang testing                  |
 
 ## Getting Started
 
@@ -28,12 +29,14 @@ Each example is a self-contained project with its own README and setup instructi
 ## Common Features
 
 All examples demonstrate these core capabilities:
+
 - Integration with language-specific testing frameworks
 - Basic test setup and test results submission using `tacotruck`
 
 ## Requirements
 
 Requirements vary by example, but generally include:
+
 - Language-specific runtime (Python, Node.js, Ruby, etc.)
 - Package manager for the specific language
 - Any dependencies listed in the example's README
