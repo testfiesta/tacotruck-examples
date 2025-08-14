@@ -1,6 +1,8 @@
 name: vitest
-
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
@@ -11,23 +13,18 @@ jobs:
     defaults:
       run:
         working-directory: ./demo-vitest-tf
-
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-
       - name: 📦 Install dependencies
         run: npm install
-
       - name: 🧪 Test
         run: npm run test
-
       - uses: testfiesta/tacotruck-action@v1
         with:
          provider: testfiesta
          base-url: https://staging.testfiesta.com
          credentials: test
-         results-path: ./test-results.xml
+         results-path: ./demo-vitest-tf/test-results.xml
