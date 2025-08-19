@@ -21,7 +21,7 @@ defmodule DemoElixirTf.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-     {:junit_formatter, "~> 3.4", only: [:test]}
+      {:junit_formatter, "~> 3.4", only: [:test]}
     ]
   end
 end

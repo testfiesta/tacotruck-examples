@@ -1,4 +1,4 @@
-name: vitest
+name: bun
 on:
   pull_request:
     branches:
@@ -6,22 +6,21 @@ on:
   push:
     branches:
       - main
-
 jobs:
   test:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./demo-vitest-tf
+        working-directory: ./demo-bun-tf
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 20
+          bun-version: 1.2.16
       - name: 📦 Install dependencies
-        run: npm install
+        run: bun install
       - name: 🧪 Test
-        run: npm run test
+        run: bun test:report
       - uses: testfiesta/tacotruck-action@v1
         with:
          provider: testfiesta
@@ -29,4 +28,4 @@ jobs:
          project: project
          base-url: https://staging.api.testfiesta.com
          credentials: ${{ secrets.TESTFIESTA_API_KEY }}
-         results-path: ./demo-vitest-tf/test-results.xml
+         results-path: ./demo-bun-tf/reports/test-results.xml
