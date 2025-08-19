@@ -1,4 +1,4 @@
-name: vitest
+name: jest
 on:
   pull_request:
     branches:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./demo-vitest-tf
+        working-directory: ./demo-jest-tf
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -29,4 +29,4 @@ jobs:
          project: project
          base-url: https://staging.api.testfiesta.com
          credentials: ${{ secrets.TESTFIESTA_API_KEY }}
-         results-path: ./demo-vitest-tf/test-results.xml
+         results-path: ./demo-jest-tf/reports/test-results.xml

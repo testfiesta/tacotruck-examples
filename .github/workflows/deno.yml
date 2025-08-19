@@ -1,4 +1,4 @@
-name: vitest
+name: deno
 on:
   pull_request:
     branches:
@@ -6,22 +6,19 @@ on:
   push:
     branches:
       - main
-
 jobs:
   test:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./demo-vitest-tf
+        working-directory: ./demo-deno-tf
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: denoland/setup-deno@v2
         with:
-          node-version: 20
-      - name: 📦 Install dependencies
-        run: npm install
+          deno-version: v2.x
       - name: 🧪 Test
-        run: npm run test
+        run: deno task test:report
       - uses: testfiesta/tacotruck-action@v1
         with:
          provider: testfiesta
@@ -29,4 +26,4 @@ jobs:
          project: project
          base-url: https://staging.api.testfiesta.com
          credentials: ${{ secrets.TESTFIESTA_API_KEY }}
-         results-path: ./demo-vitest-tf/test-results.xml
+         results-path: ./demo-deno-tf/test-results.xml

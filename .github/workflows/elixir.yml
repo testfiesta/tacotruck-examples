@@ -1,0 +1,53 @@
+name: elixir
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+env:
+  MIX_ENV: test
+
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./demo-elixir-tf
+    name: Test
+    steps:
+    - name: Set up Elixir
+      uses: erlef/setup-beam@v1
+      with:
+        otp-version: 27
+        elixir-version: 1.18.3
+
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: mix deps.get
+
+    - name: Compiles without warnings
+      run: mix compile --warnings-as-errors
+
+    - name: Check Formatting
+      run: mix format --check-formatted
+
+    - name: Run tests
+      run: mix test
+
+    - name: Report Results
+      uses: testfiesta/tacotruck-action@v1
+      with:
+         provider: testfiesta
+         handle: handle
+         project: project
+         base-url: https://staging.api.testfiesta.com
+         credentials: ${{ secrets.TESTFIESTA_API_KEY }}
+         results-path: ./demo-elixir-tf/test-reports/test-results.xml
