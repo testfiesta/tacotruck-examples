@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./demo-elixir-tf
+        working-directory: ./demo_elixir_tf
     name: Test
     steps:
     - name: Set up Elixir
@@ -43,6 +43,7 @@ jobs:
       run: mix test
 
     - name: Report Results
+      if: false
       uses: testfiesta/tacotruck-action@v1
       with:
          provider: testfiesta
@@ -50,4 +51,4 @@ jobs:
          project: project
          base-url: https://staging.api.testfiesta.com
          credentials: ${{ secrets.TESTFIESTA_API_KEY }}
-         results-path: ./demo-elixir-tf/test-reports/test-results.xml
+         results-path: ./demo_elixir_tf/test-reports/test-results.xml

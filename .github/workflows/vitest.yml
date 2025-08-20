@@ -22,7 +22,9 @@ jobs:
         run: npm install
       - name: 🧪 Test
         run: npm run test
-      - uses: testfiesta/tacotruck-action@v1
+      - name: Report Results
+        if: false
+        uses: testfiesta/tacotruck-action@v1
         with:
          provider: testfiesta
          handle: handle
