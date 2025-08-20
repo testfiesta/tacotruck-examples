@@ -43,6 +43,7 @@ jobs:
       run: mix test
 
     - name: Report Results
+      if: false
       uses: testfiesta/tacotruck-action@v1
       with:
          provider: testfiesta

@@ -1,4 +1,4 @@
-name: deno
+name: nunit
 on:
   pull_request:
     branches:
@@ -11,14 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./demo-deno-tf
+        working-directory: ./demo-dotnet-nunit-tf
     steps:
       - uses: actions/checkout@v4
-      - uses: denoland/setup-deno@v2
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v4
         with:
-          deno-version: v2.x
+            dotnet-version: '8.0.x'
+      - run: dotnet build
       - name: 🧪 Test
-        run: deno task test:report
+        run: |
+          dotnet test --logger:"junit;LogFilePath=../test-results.xml"
       - name: Report Results
         if: false
         uses: testfiesta/tacotruck-action@v1
@@ -28,4 +31,4 @@ jobs:
          project: project
          base-url: https://staging.api.testfiesta.com
          credentials: ${{ secrets.TESTFIESTA_API_KEY }}
-         results-path: ./demo-deno-tf/test-results.xml
+         results-path: ./demo-dotnet-nunit-tf/test-results.xml

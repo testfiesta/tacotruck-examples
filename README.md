@@ -8,6 +8,7 @@ Each example is a self-contained project with its own README and setup instructi
 | [demo-bun-tf](./demo-bun-tf/)                   | Example using Bun testing framework           |
 | [demo-deno-tf](./demo-deno-tf/)                 | Example using Deno testing framework          |
 | [demo-dotnet-nunit-tf](./demo-dotnet-nunit-tf/) | Example using .NET with NUnit                 |
+| [demo-dotnet-xunit-tf](./demo-dotnet-xunit-tf/) | Example using .NET with xUnit                 |
 | [demo-jest-tf](./demo-jest-tf/)                 | Example using Jest (JavaScript/TypeScript)    |
 | [demo-mocha-tf](./demo-mocha-tf/)               | Example using Mocha (JavaScript)              |
 | [demo-pestphp-tf](./demo-pestphp-tf/)           | Example using Pest PHP testing framework      |
