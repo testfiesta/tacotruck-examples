@@ -32,7 +32,7 @@ jobs:
         run: gotestsum --junitfile test-results.xml -- ./test/...
 
       - name: Report Results
-        if: true
+        if: false
         uses: testfiesta/tacotruck-action@v1
         with:
           provider: testfiesta

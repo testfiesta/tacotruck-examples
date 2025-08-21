@@ -37,7 +37,7 @@ jobs:
         if: always()
 
       - name: Report Results
-        if: true
+        if: false
         uses: testfiesta/tacotruck-action@v1
         with:
           provider: testfiesta
