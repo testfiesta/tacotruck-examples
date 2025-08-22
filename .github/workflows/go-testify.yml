@@ -1,0 +1,44 @@
+name: Go Tests with Testify
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./demo-golang-testify-tf
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 📦 Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: "1.24.2"
+
+      - name: 📦 Install dependencies
+        run: go mod download
+
+      - name: 📦 Install gotestsum
+        run: |
+          go install gotest.tools/gotestsum@latest
+          export PATH=$PATH:~/go/bin
+
+      - name: 🧪 Run tests
+        run: gotestsum --junitfile test-results.xml -- ./test/...
+
+      - name: Report Results
+        if: false
+        uses: testfiesta/tacotruck-action@v1
+        with:
+          provider: testfiesta
+          handle: handle
+          project: project
+          run-name: Go Testify testing CI run
+          base-url: https://staging.api.testfiesta.com
+          credentials: ${{ secrets.TESTFIESTA_API_KEY }}
+          results-path: ./demo-golang-testify-tf/test-results.xml
