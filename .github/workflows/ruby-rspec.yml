@@ -39,4 +39,5 @@ jobs:
          project: project
          base-url: https://staging.api.testfiesta.com
          credentials: ${{ secrets.TESTFIESTA_API_KEY }}
+         run-name: Ruby RSpec CI run ${{ github.run_number }}
          results-path: ./demo-rspec-tf/spec/test-reports/test-results.xml

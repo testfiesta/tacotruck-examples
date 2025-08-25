@@ -1,4 +1,4 @@
-name: nunit
+name: rust cargo
 on:
   pull_request:
     branches:
@@ -6,22 +6,25 @@ on:
   push:
     branches:
       - main
+env:
+    CARGO_TERM_COLOR: always
 jobs:
   test:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./demo-dotnet-nunit-tf
+        working-directory: ./demo-rust-cargo-tf
     steps:
       - uses: actions/checkout@v4
-      - name: Setup dotnet
-        uses: actions/setup-dotnet@v4
-        with:
-            dotnet-version: '8.0.x'
-      - run: dotnet build
+      - run: rustup update stable && rustup default stable
+      - name: Cargo build
+        run: |
+          cargo install cargo-junit
+          cargo build
       - name: 🧪 Test
         run: |
-          dotnet test --logger:"junit;LogFilePath=../test-results.xml"
+          cargo test --verbose
+          cargo junit --name test-results.xml
       - name: Report Results
         if: false
         uses: testfiesta/tacotruck-action@v1
@@ -31,5 +34,5 @@ jobs:
          project: project
          base-url: https://staging.api.testfiesta.com
          credentials: ${{ secrets.TESTFIESTA_API_KEY }}
-         run-name: NUnit CI run ${{ github.run_number }}
-         results-path: ./demo-dotnet-nunit-tf/test-results.xml
+         run-name: Rust cargo CI run ${{ github.run_number }}
+         results-path: ./demo-rust-cargo-tf/test-results.xml
