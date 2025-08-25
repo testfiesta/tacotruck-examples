@@ -30,4 +30,5 @@ jobs:
          project: project
          base-url: https://staging.api.testfiesta.com
          credentials: ${{ secrets.TESTFIESTA_API_KEY }}
+         run-name: Bun CI run ${{ github.run_number }}
          results-path: ./demo-bun-tf/reports/test-results.xml

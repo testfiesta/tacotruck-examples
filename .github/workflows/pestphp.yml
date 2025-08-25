@@ -40,4 +40,5 @@ jobs:
          project: project
          base-url: https://staging.api.testfiesta.com
          credentials: ${{ secrets.TESTFIESTA_API_KEY }}
+         run-name: PestPHP CI run ${{ github.run_number }}
          results-path: ./demo-pestphp-tf/test-reports/test-results.xml
