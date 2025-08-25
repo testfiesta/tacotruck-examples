@@ -24,7 +24,6 @@ jobs:
       - name: 🧪 Test
         run: |
           cargo test --verbose
-          cargo junit --name test-results.xml
       - name: Report Results
         if: false
         uses: testfiesta/tacotruck-action@v1
