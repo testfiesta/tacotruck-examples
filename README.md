@@ -19,6 +19,8 @@ Each example is a self-contained project with its own README and setup instructi
 | [demo-vitest-tf](./demo-vitest-tf/)             | Example using Vitest (JavaScript/TypeScript)  |
 | [demo_elixir_tf](./demo_elixir_tf/)             | Example using Elixir testing                  |
 | [demo-golang-tf](./demo-golang-tf/)             | Example using golang testing                  |
+| [demo-golang-testify-tf](./demo-golang-testify-tf/)             | Example using golang testing  |
+| [demo-java-junit-tf](./demo-java-junit-tf/)     | Example using Java with JUnit 5               |
 | [demo-playwright-tf](./demo-playwright-tf/)     | Example using Playwright testing framework    |
 
 ## Getting Started
