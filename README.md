@@ -21,6 +21,7 @@ Each example is a self-contained project with its own README and setup instructi
 | [demo-golang-tf](./demo-golang-tf/)             | Example using golang testing                  |
 | [demo-golang-testify-tf](./demo-golang-testify-tf/)             | Example using golang testing  |
 | [demo-java-junit-tf](./demo-java-junit-tf/)     | Example using Java with JUnit 5               |
+| [demo-java-testng-tf](./demo-java-testng-tf/)   | Example using Java with TestNG                |
 | [demo-playwright-tf](./demo-playwright-tf/)     | Example using Playwright testing framework    |
 
 ## Getting Started
