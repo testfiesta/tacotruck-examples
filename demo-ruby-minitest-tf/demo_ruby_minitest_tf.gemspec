@@ -1,24 +1,24 @@
 # frozen_string_literal: true
 
-require_relative "lib/demo_ruby_tf/version"
+require_relative "lib/demo_ruby_minitest_tf/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "demo_ruby_tf"
-  spec.version = DemoRubyTf::VERSION
+  spec.name = "demo_ruby_minitest_tf"
+  spec.version = DemoRubyMinitestTf::VERSION
   spec.authors = ["testfiesta"]
-  spec.email = ["support@testfiesta.com"]
+  spec.email = ["testfiesta@gmail.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = "Demo Ruby calculator using Minitest testing framework"
+  spec.description = "A simple Ruby calculator project demonstrating basic arithmetic operations with Minitest tests"
+  spec.homepage = "https://github.com/testfiesta/tacotruck-examples"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.1.0"
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
+  spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/testfiesta/tacotruck-examples"
+  spec.metadata["changelog_uri"] = "https://github.com/testfiesta/tacotruck-examples/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
