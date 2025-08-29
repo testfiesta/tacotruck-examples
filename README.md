@@ -15,6 +15,7 @@ Each example is a self-contained project with its own README and setup instructi
 | [demo-phpunit-tf](./demo-phpunit-tf/)           | Example using PHPUnit                         |
 | [demo-pytest-tf](./demo-pytest-tf/)             | Example using pytest (Python)                 |
 | [demo-rspec-tf](./demo-rspec-tf/)               | Example using RSpec (Ruby)                    |
+| [demo-ruby-minitest-tf](./demo-ruby-minitest-tf/)         | Example using Minitest (Ruby)       |
 | [demo-rust-cargo-tf](./demo-rust-cargo-tf/)     | Example using Rust with Cargo test            |
 | [demo-vitest-tf](./demo-vitest-tf/)             | Example using Vitest (JavaScript/TypeScript)  |
 | [demo_elixir_tf](./demo_elixir_tf/)             | Example using Elixir testing                  |

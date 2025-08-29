@@ -1,0 +1,51 @@
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+/test/test-reports/
+/test-reports/
+
+# rspec failure tracking
+.rspec_status
+
+# rbenv
+.ruby-version
+
+# RVM
+.rvmrc
+
+# bundler
+.bundle
+vendor/bundle
+
+# jeweler generated
+Gemfile.lock
+
+# Have editor/IDE/OS specific files you need to ignore? Consider using a global gitignore:
+#
+# * Create a file at ~/.gitignore
+# * Include files you want ignored
+# * Run: git config --global core.excludesfile ~/.gitignore
+#
+# After doing this, these files will be ignored in all your git projects,
+# saving you from having to 'pollute' every project you touch with them
+#
+# Not sure what to add to your global gitignore? Look at this:
+# https://github.com/github/gitignore/blob/main/Global/
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

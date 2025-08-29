@@ -1,0 +1,46 @@
+name: ruby minitest
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./demo-ruby-minitest-tf
+    name: Test
+    steps:
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.4.5
+
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: bundle install
+
+    - name: Create test reports directory
+      run: mkdir -p test/test-reports
+
+    - name: Run tests
+      run: JUNIT_OUTPUT=test/test-reports/test-results.xml bundle exec rake test
+
+    - name: Report Results
+      if: false
+      uses: testfiesta/tacotruck-action@v1
+      with:
+         provider: testfiesta
+         handle: handle
+         project: project
+         base-url: https://staging.api.testfiesta.com
+         credentials: ${{ secrets.TESTFIESTA_API_KEY }}
+         run-name: Ruby Minitest CI run ${{ github.run_number }}
+         results-path: ./demo-ruby-minitest-tf/test-reports/TEST-TestDemoRubyMinitestTf.xml
