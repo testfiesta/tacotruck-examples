@@ -1,0 +1,18 @@
+{
+  "name": "@testfiesta/demo-cypress-tf",
+  "version": "1.0.0",
+  "description": "Demo Cypress E2E testing with a calculator application",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server src -p 3000",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test": "cypress run",
+    "test:headed": "cypress run --headed"
+  },
+  "keywords": ["cypress", "e2e", "testing", "calculator", "demo"],
+  "devDependencies": {
+    "cypress": "^15.1.0",
+    "http-server": "^14.1.1"
+  }
+}
