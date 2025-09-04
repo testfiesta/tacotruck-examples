@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - Cypress Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <div class="calculator">
+            <div class="display">
+                <input type="text" id="display" data-cy="display" readonly>
+            </div>
+            <div class="buttons">
+                <button class="btn clear" data-cy="clear" onclick="clearDisplay()">C</button>
+                <button class="btn operator" data-cy="divide" onclick="appendToDisplay('/')">/</button>
+                <button class="btn operator" data-cy="multiply" onclick="appendToDisplay('*')">*</button>
+                <button class="btn operator" data-cy="subtract" onclick="appendToDisplay('-')">-</button>
+                
+                <button class="btn number" data-cy="number-7" onclick="appendToDisplay('7')">7</button>
+                <button class="btn number" data-cy="number-8" onclick="appendToDisplay('8')">8</button>
+                <button class="btn number" data-cy="number-9" onclick="appendToDisplay('9')">9</button>
+                <button class="btn operator add" data-cy="add" onclick="appendToDisplay('+')">+</button>
+                
+                <button class="btn number" data-cy="number-4" onclick="appendToDisplay('4')">4</button>
+                <button class="btn number" data-cy="number-5" onclick="appendToDisplay('5')">5</button>
+                <button class="btn number" data-cy="number-6" onclick="appendToDisplay('6')">6</button>
+                <button class="btn equals" data-cy="equals" onclick="calculate()" rowspan="2">=</button>
+                
+                <button class="btn number" data-cy="number-1" onclick="appendToDisplay('1')">1</button>
+                <button class="btn number" data-cy="number-2" onclick="appendToDisplay('2')">2</button>
+                <button class="btn number" data-cy="number-3" onclick="appendToDisplay('3')">3</button>
+                
+                <button class="btn number zero" data-cy="number-0" onclick="appendToDisplay('0')">0</button>
+                <button class="btn decimal" data-cy="decimal" onclick="appendToDisplay('.')">.</button>
+            </div>
+        </div>
+        <div class="result" id="result" data-cy="result"></div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
