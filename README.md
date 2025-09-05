@@ -4,10 +4,10 @@ Each example is a self-contained project with its own README and setup instructi
 
 | Example                                         | Description                                   |
 | ----------------------------------------------- | --------------------------------------------- |
-| [demo-apps](./demo-apps/)                       | Collection of sample applications for testing |
 | [demo-bun-tf](./demo-bun-tf/)                   | Example using Bun testing framework           |
 | [demo-cypress-tf](./demo-cypress-tf/)           | Example using Cypress testing framework       |
 | [demo-deno-tf](./demo-deno-tf/)                 | Example using Deno testing framework          |
+| [demo-dotnet-mstest-tf](./demo-dotnet-mstest-tf/) | Example using .NET with MSTest              |
 | [demo-dotnet-nunit-tf](./demo-dotnet-nunit-tf/) | Example using .NET with NUnit                 |
 | [demo-dotnet-xunit-tf](./demo-dotnet-xunit-tf/) | Example using .NET with xUnit                 |
 | [demo-jest-tf](./demo-jest-tf/)                 | Example using Jest (JavaScript/TypeScript)    |
