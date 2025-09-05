@@ -1,0 +1,35 @@
+name: mstest
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./demo-dotnet-mstest-tf
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v4
+        with:
+            dotnet-version: '8.0.x'
+      - run: dotnet build
+      - name: 🧪 Test
+        run: |
+          dotnet test --logger:"junit;LogFilePath=../test-results.xml"
+      - name: Report Results
+        if: false
+        uses: testfiesta/tacotruck-action@v1
+        with:
+         provider: testfiesta
+         handle: handle
+         project: project
+         base-url: https://staging.api.testfiesta.com
+         credentials: ${{ secrets.TESTFIESTA_API_KEY }}
+         run-name: MSTest CI run ${{ github.run_number }}
+         results-path: ./demo-dotnet-mstest-tf/test-results.xml
